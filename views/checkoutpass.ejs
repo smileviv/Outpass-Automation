@@ -1,0 +1,23 @@
+<%- include("partials/header"); %>
+
+<form action="/checkoutpass" method="post">
+coerid:<input type="number" name="username" >
+<button type="submit" name="submit">submit</button>
+</form>
+
+<% outpasses.forEach(function(outpass){ %>
+<p>name:<%= outpass.name %></p>
+<p>id:<%= outpass.id %></p>
+<p>branch:<%= outpass.branch %></p>
+<p>bhawan:<%= outpass.bhawan %></p>
+<p>from:<%= outpass.from %></p>
+<p>to:<%= outpass.to %></p>
+<p>date:<%= outpass.date %></p>
+<p>place:<%= outpass.place %></p>
+<p>purpose:<%= outpass.purpose%></p>
+<p>status:<%= outpass.status %></p>
+
+<%}); %>
+
+
+<%- include("partials/footer"); %>

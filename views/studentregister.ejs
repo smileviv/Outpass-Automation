@@ -1,0 +1,12 @@
+<%- include("partials/header"); %>
+    <h1>welcome</h1>
+    <form action="/student/register" method="post">
+        <% errors.forEach(function(error){ %> <br>
+        <p><%= error %></p>
+        <% }); %>
+        name:<input type="text" name="name" value="<%= typeof name !='undefined' ? name:'' %>" />
+        coerid:<input type="text" name="username" value="<%= typeof username !='undefined' ? username:'' %>" />
+        password:<input type="password" name="password" value="<%= typeof password !='undefined' ? password:'' %>" />
+        <button type="submit">Submit</button>
+    </form>
+<%- include("partials/footer"); %>

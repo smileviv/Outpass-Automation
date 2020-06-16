@@ -1,0 +1,26 @@
+<%- include("partials/header"); %>
+<% outpasses.forEach(function(outpass){ %>
+<p>name:<%= outpass.name %></p>
+<p>branch:<%= outpass.branch %></p>
+<p>bhawan:<%= outpass.bhawan %></p>
+<p>from:<%= outpass.from %></p>
+<p>to:<%= outpass.to %></p>
+<p>date:<%= outpass.date %></p>
+<p>place:<%= outpass.place %></p>
+<p>purpose:<%= outpass.purpose%></p>
+
+
+<form action="/hosteloutpass" method="post">
+     id:<input name="sid" type="number" value="<%= outpass.id %>"> 
+status:
+    <label>Approved </label>
+    <input type="radio" name="approved">
+    <label>Rejected </label>
+    <input type="radio" name="rejected">
+    
+    <p> <%= outpass.status%></p>
+    
+    <button type="submit">submit</button>
+</form>
+<% }); %>
+<%- include("partials/footer"); %>

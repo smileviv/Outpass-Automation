@@ -1,0 +1,12 @@
+<%- include("partials/header"); %>
+<h1>welcome</h1>
+<form action="/warden/login" method="post">
+    <% errors.forEach(function(error){ %>
+    <p><%= error %></p><br>
+    <% }); %>
+    hostel name:<input type="text" name="username">
+    id:<input type="number" name="id">
+    password:<input type="password" name="password">
+    <button type="submit">Submit</button>
+</form>
+<%- include("partials/footer"); %>

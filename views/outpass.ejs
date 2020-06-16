@@ -1,0 +1,18 @@
+<%- include("partials/header"); %>
+<h1>successful experiment</h1>
+<form action="/student/outpass" method="post">
+    name: <input type="text" name="sname">
+    id:<input type="number" name="sid">
+    year:<input type="text" name="syear">
+    branch: <input type="text" name="sbranch">
+    bhawan: <input type="text" name="sbhawan">
+    from: <input type="text" name="sfrom">
+    to: <input type="text" name="sto">
+    date: <input type="date" name="sdate">
+    place: <input type="text" name="splace">
+    purpose: <input type="text" name="spurpose">
+    <button name="submit">submit</button>
+
+</form>
+<%- include("partials/footer"); %>
+
